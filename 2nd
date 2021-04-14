@@ -1,0 +1,28 @@
+class A{
+    int a=5;
+    int b=3;
+    
+    void addition(){
+        System.out.println("The Sum is " +(a+b));
+    }
+    void subtraction(int a , int b){
+        System.out.println("The Difference is " +(a-b));
+    }
+}
+class Complex_A extends A{
+    
+    void addition(int r1, int r2, int i1, int i2){
+        System.out.println("The Sum is "+(r1+r2)+ " + "+(i1+i2)+"i");
+    }
+    void subtraction(int r1, int r2, int i1, int i2){
+        System.out.println("The Difference is "+(r1+r2)+" + "+(i1+i2)+"i");
+    }
+}
+public class MyClass {
+    public static void main(String args[]) {
+      Complex_A c = new Complex_A();
+      c.addition();
+      c.addition(1,2,3,4);
+      
+    }
+}
