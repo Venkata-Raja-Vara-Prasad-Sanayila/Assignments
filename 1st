@@ -1,0 +1,191 @@
+class Automobile {
+
+	public int no_wheels;
+	public int no_mirror;
+	public int gear;
+
+	public void run() {
+		System.out.println("Running");
+
+	}
+	public void Break() {
+		System.out.println("Break Applied");
+
+	}
+	public void change_direction() {
+		System.out.println("Direction Changed");
+
+	}
+}
+class Toto extends Automobile{
+		public int no_wheels=3;
+		public int no_mirror=3;
+		public int gear=0;
+
+        public void run() {
+	          System.out.println("Toto is running");
+
+         }
+        public void Break() {
+
+	           System.out.println("Toto break is applied");
+        }
+
+        public void change_direction() {
+
+	           System.out.println("Toto direction is changed");
+        }
+
+
+}
+class TwoWheeler extends Automobile{
+	public int no_wheels;
+    public int no_mirror;
+	public int gear;
+
+   public void run() {
+        System.out.println("Two wheeler is running");
+
+    }
+    public void Break() {
+
+        System.out.println("Two wheeler break is applied");
+   }
+
+   public void change_direction() {
+
+        System.out.println("Two wheeler direction is changed");
+    }
+
+}
+class Cycle extends TwoWheeler{
+
+			int no_wheels=2;
+		int no_mirror=0;
+		int gear=2;
+	public void run() {
+	System.out.println("Cycle is running");
+
+	}
+	public void Break() {
+
+	System.out.println("Cycle break is applied");
+	}
+
+	public void change_direction() {
+
+	System.out.println("Cycle direction is changed");
+	}
+
+
+
+	}	
+class Motorcycle extends TwoWheeler {
+	int no_wheels=2;
+	int no_mirror=2;
+	int gear=4;
+
+    public void run() {
+        System.out.println("Motorcycle is running");
+
+    }
+    public void Break() {
+
+        System.out.println("Motorcycle break is applied");
+    }
+
+    public void change_direction() {
+
+        System.out.println("Motorcycle direction is changed");
+   }
+
+}
+
+public class Vehicle {
+
+	public static void main(String[] args) {
+
+
+
+
+		//Object Creation
+		Automobile a=new Automobile();
+		Toto t= new Toto();
+		TwoWheeler tw=new TwoWheeler();
+		Cycle c =new Cycle();
+		Motorcycle m =new Motorcycle();
+		System.out.println("------------------------Without Upcasting-------------------------\n");
+		System.out.println("\n****AutoMobile***\n");
+		a.run();
+		a.Break();
+	    a.change_direction();
+		System.out.println("Number of Wheels in Automobile: "+a.no_wheels +" ;   "+" Number of Mirrors in Automobile: "+a.no_mirror+" ;   "+"Number of Gear in Automobile: "+a.gear);
+		System.out.println("\n****Toto***\n");		
+	    t.run();
+		t.Break();
+		t.change_direction();
+		System.out.println("Number of Wheels in Toto: "+t.no_wheels +" ;   "+" Number of Mirrors in Toto: "+t.no_mirror+" ;   "+"Number of Gear in Toto: "+t.gear);
+        System.out.println("\n****Two Wheeler***\n");
+		tw.run();
+		tw.Break();
+		tw.change_direction();
+		System.out.println("Number of Wheels in TwoWheeler: "+tw.no_wheels +" ;   "+" Number of Mirrors in TwoWheeler: "+tw.no_mirror+" ;   "+"Number of Gear in TwoWheeler: "+tw.gear);
+
+		System.out.println("\n****Cycle***\n");
+		c.run();
+		c.Break();
+		c.change_direction();
+		System.out.println("Number of Wheels in Cycle: "+c.no_wheels +" ;   "+" Number of Mirrors in Cycle: "+c.no_mirror+" ;   "+"Number of Gear in Cycle:   "+c.gear);
+
+
+        System.out.println("\n****MotorCycle***\n");
+
+		m.run();
+		m.Break();
+		m.change_direction();
+		System.out.println("Number of Wheels in MotorCycle: "+m.no_wheels +" ;   "+" Number of Mirrors in MotorCycle: "+m.no_mirror+" ;   "+"Number of Gear in MotorCycle: "+m.gear);
+
+
+    //Upcasting 
+
+	System.out.println("\n---------------Using Upcasting----------------\n");
+    System.out.println("\n****Toto***\n");
+    Automobile au;
+    Toto to=new Toto();
+    au=to;
+    au.run();
+    au.Break();
+    au.change_direction();
+
+    System.out.println("Number of Wheels in Toto: "+au.no_wheels +" ;   "+" Number of Mirrors in Toto: "+au.no_mirror+" ;   "+"Number of Gear in Toto: "+au.gear);
+
+    System.out.println("\n****Two Wheeler***\n");
+	Automobile aut=new TwoWheeler();
+
+	aut.run();
+	aut.Break();
+	aut.change_direction();
+	System.out.println("Number of Wheels in TwoWheeler: "+aut.no_wheels +" ;   "+" Number of Mirrors in TwoWheeler: "+aut.no_mirror+" ;   "+"Number of Gear in TwoWheeler: "+aut.gear);
+
+	System.out.println("\n****Cycle***\n");
+
+	TwoWheeler tw2=new Cycle();
+	tw2.run();
+	tw2.Break();
+	tw2.change_direction();
+	System.out.println("Number of Wheels in Cycle: "+tw2.no_wheels +" ;   "+" Number of Mirrors in Cycle: "+tw2.no_mirror+" ;   "+"Number of Gear in Cycle:   "+tw2.gear);
+
+
+    System.out.println("\n****Motorcycle***\n");
+
+	TwoWheeler tw1=new Motorcycle();
+	tw1.run();
+	tw1.Break();
+	tw1.change_direction();
+	System.out.println("Number of Wheels in TwoWheeler: "+tw1.no_wheels +" ;   "+" Number of Mirrors in TwoWheeler: "+tw1.no_mirror+" ;   "+"Number of Gear in TwoWheeler: "+tw1.gear);
+
+
+
+	}
+
+}
