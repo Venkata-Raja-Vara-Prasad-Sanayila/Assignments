@@ -1,0 +1,22 @@
+class Programmer{
+    final void display(){
+        System.out.println("The Original Code");
+    }
+}
+class Hacker extends Programmer{
+        @Override
+        void display(){
+        
+        System.out.println("Your code is hacked");
+    }
+}
+
+public class  Solution{
+    public static void main(String args[]) {
+  
+   Programmer h= new Hacker();
+  
+   h.display();
+  
+    }
+}
