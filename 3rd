@@ -1,0 +1,45 @@
+class Shape{
+    double pi=3.14;
+    void area(){
+        
+    }
+    void periphery(){
+        
+    }
+}
+class Rectangle extends Shape{
+    void area(int l, int b){
+        int rct = l*b;
+        System.out.println(rct);
+    }
+    void periphery(int l , int b){
+        System.out.println(2*(l+b));
+    }
+}
+class Circle extends Shape{
+     void area(int r){
+        double cic = pi*r*r;
+        System.out.println(cic);
+    }
+    void periphery(int r){
+        System.out.println(2*pi*r);
+    }
+}
+class Square extends Rectangle{
+     void area(int a){
+        int sq = a*a;
+        System.out.println(sq);
+    }
+    void periphery(int a){
+        System.out.println(4*a);
+    }
+}
+public class Solution {
+    public static void main(String args[]) {
+    Rectangle r = new Rectangle();
+    r.area(5,3);
+    r.periphery(5,3);
+
+      System.out.println();
+    }
+}
